@@ -1,19 +1,22 @@
 package net.luni.greenthumb;
 
-
-import net.neoforged.bus.api.IEventBus;
+import net.luni.greenthumb.config.ConfigScreen;
+import net.luni.greenthumb.config.ModConfig;
+import net.luni.greenthumb.events.ModEvents;
+import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.common.NeoForge;
 
 @Mod(Constants.MOD_ID)
 public class Main {
+    public Main() {
+        ModConfig.load();
 
-    public Main(IEventBus eventBus) {
-        // This method is invoked by the NeoForge mod loader when it is ready
-        // to load your mod. You can access NeoForge and Common code in this
-        // project.
-
-        // Use NeoForge to bootstrap the Common mod.
-        Constants.LOG.info("Hello NeoForge world!");
-        CommonClass.init();
+        NeoForge.EVENT_BUS.register(new ModEvents());
+        ModLoadingContext.get().registerExtensionPoint(
+                IConfigScreenFactory.class,
+                () -> (minecraft, parent) -> ConfigScreen.createConfigScreen(parent)
+        );
     }
 }

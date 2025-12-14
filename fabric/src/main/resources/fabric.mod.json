@@ -8,7 +8,7 @@
     "${mod_author}"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
+    "homepage": "https://mrrp.dev/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "${license}",
@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.luni.greenthumb.Main"
+    ],
+    "modmenu": [
+      "net.luni.greenthumb.config.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -26,10 +29,10 @@
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}",
+    "minecraft": ">=${minimum_minecraft_version} <${maximum_minecraft_version}",
     "java": ">=${java_version}"
   },
   "suggests": {
-    "another-mod": "*"
+    "modmenu": "*"
   }
 }

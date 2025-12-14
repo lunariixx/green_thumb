@@ -1,0 +1,11 @@
+{
+  "config.greenthumb.title": "Green Thumb Configuration",
+
+  "config.greenthumb.auto_replant": "Auto Replant",
+
+  "config.greenthumb.auto_replant.enabled": "Enable Auto Replant",
+  "config.greenthumb.auto_replant.enabled.tooltip": "Automatically replant crops when broken.",
+
+  "config.greenthumb.auto_replant.require_sneak": "Require Sneak to Break",
+  "config.greenthumb.auto_replant.require_sneak.tooltip": "When enabled, crops will only be replanted if you are sneaking. When disabled, crops will only be replanted if you are not sneaking."
+}

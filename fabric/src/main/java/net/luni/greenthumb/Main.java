@@ -1,18 +1,14 @@
 package net.luni.greenthumb;
 
 import net.fabricmc.api.ModInitializer;
+import net.luni.greenthumb.config.ModConfig;
+import net.luni.greenthumb.events.ModEvents;
 
 public class Main implements ModInitializer {
-
     @Override
     public void onInitialize() {
+        ModConfig.load();
 
-        // This method is invoked by the Fabric mod loader when it is ready
-        // to load your mod. You can access Fabric and Common code in this
-        // project.
-
-        // Use Fabric to bootstrap the Common mod.
-        Constants.LOG.info("Hello Fabric world!");
-        CommonClass.init();
+        new ModEvents().register();
     }
 }
