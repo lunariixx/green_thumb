@@ -88,6 +88,8 @@ processResources {
                        'mod_name'                     : mod_name,
                        'mod_author'                   : mod_author,
                        'mod_id'                       : mod_id,
+                       "mod_url"                      : mod_url,
+                       "issue_tracker"                : issue_tracker,
                        'license'                      : license,
                        'description'                  : project.description,
                        'neoforge_version'             : neoforge_version,

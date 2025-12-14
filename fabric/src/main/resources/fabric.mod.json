@@ -8,8 +8,8 @@
     "${mod_author}"
   ],
   "contact": {
-    "homepage": "https://mrrp.dev/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "${mod_url}",
+    "sources": "https://github.com/lunariixx/green_thumb/tree/master"
   },
   "license": "${license}",
   "icon": "${mod_id}.png",
